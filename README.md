@@ -3,6 +3,8 @@ Role Name
 
 Nginx setup for django project.
 
+This includes uwsgi and supervisord.
+
 Role Variables
 --------------
 
@@ -24,8 +26,10 @@ Example Playbook
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:  
 
     - hosts: django-servers  
-      roles:  
-         - { role: dinesh.django_nginx }  
+      remote_user: root
+      roles:
+        - { role: django_uwsgi_nginx, project_name: 'your_project_name', server_name: domain_name_or_ip_addr }
+
 
 License
 -------
