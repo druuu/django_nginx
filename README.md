@@ -28,7 +28,7 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: django-servers  
       remote_user: root
       roles:
-        - { role: django_uwsgi_nginx, project_name: 'your_project_name', server_name: domain_name_or_ip_addr }
+        - { role: django_nginx, project_name: 'your_project_name', server_name: domain_name_or_ip_addr }
 
 
 License
